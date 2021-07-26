@@ -1,0 +1,7 @@
+[Default Applications]
+x-scheme-handler/tg=userapp-Telegram Desktop-SQQ250.desktop
+x-scheme-handler/etcher=balena-etcher-electron.desktop
+
+[Added Associations]
+x-scheme-handler/tg=userapp-Telegram Desktop-SQQ250.desktop;
+application/x-compressed-tar=pcmanfm.desktop;
