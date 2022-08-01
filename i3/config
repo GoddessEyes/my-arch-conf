@@ -209,10 +209,9 @@ exec nitrogen --restore
 bindsym $mod+Shift+b exec vivaldi-stable
 bindsym $mod+Shift+p exec pycharm
 bindsym $mod+Shift+t exec telegram-desktop
-bindsym $mod+Shift+d exec pcmanfm
+bindsym $mod+Shift+d exec spacefm
 bindsym $mod+Shift+x exec i3lock-fancy
 bindsym $mod+Shift+s exec gscreenshot
 
 bindsym XF86MonBrightnessUp exec brightnessctl set 10+
 bindsym XF86MonBrightnessDown exec brightnessctl set 10-
-
