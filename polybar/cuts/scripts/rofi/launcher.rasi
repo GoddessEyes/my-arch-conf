@@ -8,13 +8,12 @@
  */
 
 configuration {
-	font:							"Iosevka Nerd Font 10";
     show-icons:                     true;
 	icon-theme: 					"Papirus";
     display-drun: 					"";
     drun-display-format:            "{name}";
     disable-history:                false;
-    fullscreen:                     false;
+    fullscreen:                     true;
 	hide-scrollbar: 				true;
 	sidebar-mode: 					false;
 }
@@ -25,7 +24,7 @@ window {
     transparency:                   "real";
     background-color:               @bg;
     text-color:                     @fg;
-	border:							0px 0px 0px 0px;
+	border:							0px;
 	border-color:					@ac;
     border-radius:                  0px;
 	width:							500px;
@@ -37,9 +36,9 @@ window {
 prompt {
     enabled: 						true;
 	padding: 						0px;
-	background-color: 				@bga;
+	background-color: 				@al;
 	text-color: 					@ac;
-	font:							"feather 12";
+	font:							"feather 8";
 }
 
 entry {
@@ -49,7 +48,7 @@ entry {
     expand:                         true;
     horizontal-align:               0;
     placeholder:                    "Search...";
-	padding: 						0px 0px 0px 5px;
+    padding:                        0px 0px 0px 8px;
     blink:                          true;
 }
 
@@ -58,11 +57,11 @@ inputbar {
     background-color:               @bga;
     text-color:                     @fg;
     expand:                         false;
-	border:							0px 0px 1px 0px;
+	border:							0px 0px 0px 0px;
     border-radius:                  0px;
-	border-color:					@se;
+	border-color:					@ac;
     margin:                         0px;
-    padding:                        10px;
+    padding:                        12px;
 }
 
 listview {
@@ -82,8 +81,8 @@ mainbox {
     border-radius:                  0px;
 	border-color:					@ac;
     children:                       [ inputbar, listview ];
-    spacing:                       	5px;
-    padding:                        5px;
+    spacing:                       	0px;
+    padding:                        0px;
 }
 
 element {
@@ -91,15 +90,19 @@ element {
     text-color:                     @fg;
     orientation:                    horizontal;
     border-radius:                  0px;
-	padding: 						8px;
+    padding:                        8px;
 }
 
 element-icon {
+    background-color:               transparent;
+    text-color:               		inherit;
     size:                           24px;
     border:                         0px;
 }
 
 element-text {
+    background-color:               transparent;
+    text-color:               		inherit;
     expand:                         true;
     horizontal-align:               0;
     vertical-align:                 0.5;
@@ -108,8 +111,8 @@ element-text {
 
 element selected {
     background-color:               @se;
-    text-color:                     @bg;
-	border:							0px 0px 0px 0px;
+    text-color:                     @fg;
+	border:							0px 0px 0px 2px;
     border-radius:                  0px;
     border-color:                  	@ac;
 }

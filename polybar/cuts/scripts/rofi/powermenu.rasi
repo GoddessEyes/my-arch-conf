@@ -8,7 +8,7 @@
  */
 
 configuration {
-	font:							"Iosevka Nerd Font 10";
+	font:							"Terminus 9";
     show-icons:                     true;
 	icon-theme: 					"Papirus";
     display-drun: 					"";
@@ -25,10 +25,10 @@ window {
     transparency:                   "real";
     background-color:               @bg;
     text-color:                     @fg;
-	border:							0px 0px 0px 0px;
+	border:							0px;
 	border-color:					@ac;
     border-radius:                  0px;
-	width:							350px;
+	width:							300px;
     location:                       center;
     x-offset:                       0;
     y-offset:                       0;
@@ -37,17 +37,17 @@ window {
 prompt {
     enabled: 						true;
 	padding: 						0px 0px 0px 5px;
-	background-color: 				@bga;
+	background-color: 				@al;
 	text-color: 					@fg;
 }
 
 textbox-prompt-colon {
-	padding: 						0px;
-	background-color: 				@bga;
+	padding: 						0px 0px 0px 2px;
+	background-color: 				@al;
 	text-color: 					@ac;
 	expand: false;
-	str: "";
-	font:							"feather 12";
+	str: "";
+	font:							"feather 8";
 }
 
 entry {
@@ -57,20 +57,20 @@ entry {
     expand:                         true;
     horizontal-align:               0;
     placeholder:                    "Search...";
-	padding: 						0px 0px 0px 10px;
+    padding:                        0px;
     blink:                          true;
 }
 
 inputbar {
-	children: 						[ textbox-prompt-colon, entry ];
+	children: 						[ textbox-prompt-colon, prompt ];
     background-color:               @bga;
     text-color:                     @fg;
     expand:                         false;
-	border:							0px 0px 1px 0px;
+	border:							0px 0px 0px 0px;
     border-radius:                  0px;
-	border-color:					@se;
+	border-color:					@ac;
     margin:                         0px;
-    padding:                        10px;
+    padding:                        12px;
 }
 
 listview {
@@ -78,7 +78,7 @@ listview {
     padding:                        0px;
     columns:                        1;
     lines:                          5;
-    spacing:                        5px;
+    spacing:                        0px;
     cycle:                          true;
     dynamic:                        true;
     layout:                         vertical;
@@ -90,8 +90,8 @@ mainbox {
     border-radius:                  0px;
 	border-color:					@ac;
     children:                       [ inputbar, listview ];
-    spacing:                       	5px;
-    padding:                        5px;
+    spacing:                       	0px;
+    padding:                        0px;
 }
 
 element {
@@ -99,15 +99,19 @@ element {
     text-color:                     @fg;
     orientation:                    horizontal;
     border-radius:                  0px;
-	padding: 						8px 8px 8px -20px;
+    padding:                        8px 8px 8px -15px;
 }
 
 element-icon {
+    background-color:               transparent;
+    text-color:               		inherit;
     size:                           24px;
     border:                         0px;
 }
 
 element-text {
+    background-color:               transparent;
+    text-color:               		inherit;
     expand:                         true;
     horizontal-align:               0;
     vertical-align:                 0.5;
@@ -116,8 +120,8 @@ element-text {
 
 element selected {
     background-color:               @se;
-    text-color:                     @bg;
-	border:							0px 0px 0px 0px;
+    text-color:                     @fg;
+	border:							0px 0px 0px 2px;
     border-radius:                  0px;
     border-color:                  	@ac;
 }
