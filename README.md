@@ -1,5 +1,7 @@
 # my-i3-conf
 
+Fonts: ttf-dejavu ttf-liberation noto-fonts ner-fonts
+
 Problem fix:
 
 Systemd on shutdown/reboot very slow:
