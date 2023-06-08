@@ -1,6 +1,6 @@
 # my-i3-conf
 
-Fonts: ttf-dejavu ttf-liberation noto-fonts ner-fonts
+Fonts: ttf-dejavu ttf-liberation noto-fonts nerd-fonts
 
 Problem fix:
 
