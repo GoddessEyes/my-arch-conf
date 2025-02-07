@@ -1,23 +1,26 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-eval "$(/usr/bin/mise activate zsh)"
 
-export ZSH="~/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
-PATH=$PATH:~/.local/bin
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
+plugins=(git elixir mix archlinux git pip python zsh-autosuggestions zsh-completions docker mise)
 
-alias dcs='docker compose'
-alias zapret='systemctl start zapret'
-. ~/.ghcup/env
-
-plugins=(autoupdate git elixir mix archlinux git pip python zsh-autosuggestions zsh-completions docker)
 source $ZSH/oh-my-zsh.sh
 
+if uwsm check may-start && uwsm select; then
+	exec systemd-cat -t uwsm_start uwsm start default
+fi
 
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+alias dcs='docker compose'
+alias evpn='sudo openvpn --config ~/Express/vpn.ovpn  --auth-user-pass ~/Express/auth.txt'
+alias zapret='systemctl start zapret'
+alias sms='dcs up -d postgres redis cassandra etcd'
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+export ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_file_bytes 1024000"
+
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
+eval "$(/home/goddesseyes/.local/bin/mise activate zsh)"
