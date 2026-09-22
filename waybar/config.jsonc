@@ -2,7 +2,7 @@
   {
     "include": "~/.config/waybar/custom_modules/modules",
     "layer": "top",
-    "height": 20,
+    "height": 28,
     "margin-top": 0,
     "margin-left": 10,
     "margin-bottom": 0,
@@ -11,29 +11,21 @@
 
     "modules-left": ["cpu", "memory", "temperature", "battery"],
 
-    "modules-center": ["hyprland/workspaces"],
+    "modules-center": ["ext/workspaces"],
 
-    "modules-right": [
-      "tray",
-      "backlight",
-      "pulseaudio",
-      "clock",
-      "network",
-      "custom/power-menu",
-    ],
+    "modules-right": ["tray", "backlight", "pulseaudio", "clock", "network", "custom/power-menu"],
 
-    "hyprland/workspaces": {
+    "ext/workspaces": {
       "disable-scroll": true,
       "all-outputs": true,
-      "warp-on-scroll": false,
+      "sort-by-id": false,
+      "on-click": "activate",
       "format": "{name}: {icon}",
       "format-icons": {
-        "1": " ",
-        "2": " ",
-        "3": " ",
-        "4": " ",
-        "urgent": "",
-        "focused": "",
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
       },
     },
 
